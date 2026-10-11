@@ -2,6 +2,7 @@ def verify_age(age: int) -> bool:
     """Подтверждение того, что вам 18."""
     return age >= 18
 
+
 def some_function(x, y, z, e):
     """Непонятная функция.
 

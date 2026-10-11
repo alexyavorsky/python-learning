@@ -89,4 +89,31 @@ def main():
             break
 
 # 5
-print("игра")
+human_parts = ['  O     |', r' /|\    |', r' / \    |', '        |']
+msg = '  |-----*\n'
+print(msg)
+word = input("Введи слово, которое нужно отгадать: ").lower()
+show_word = ['*'] * len(word)
+attempts = 3
+print(f"У вас {attempts} попытки")
+while '*' in show_word and attempts > 0:
+    print(''.join(show_word))
+    letter = input("Введи букву: ").lower()
+    if len(letter) != 1:
+        print("Вводи по одной букве")
+        continue
+    positions = []
+    for pos, symbol in enumerate(word, start=0):
+        if letter == symbol:
+            positions.append(pos)
+    for pos in positions:
+        show_word[pos] = letter
+    if not positions:
+        msg += human_parts.pop(0) + '\n'
+        attempts -= 1
+        print(msg)
+        print(f"-1 попытка, неправильно угадал. у вас осталось {attempts} попыток")
+if '*' in show_word:
+    print(f"Попытки, кончились. Человек погиб. Было загадано: {word}")
+else:
+    print("Успешно отгадано")
