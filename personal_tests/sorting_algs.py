@@ -28,3 +28,5 @@ while my_list:
     sorted_list.append(my_list.pop(min_idx))
 
 print(sorted_list)
+
+# i dont know
