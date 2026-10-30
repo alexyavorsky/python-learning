@@ -19,3 +19,4 @@ def binary_search(list, item):
 my_list = [1, 3, 5, 6, 8, 9, 10, 13, 15, 634, 6543]
 
 print(binary_search(my_list, -1))
+print("Hello")
