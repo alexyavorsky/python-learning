@@ -53,3 +53,4 @@ response = requests.post(url=URL, json=payload, headers=headers)
 
 if response.json()["success"]:
     print("задача успешно создана")
+    print('yes')
