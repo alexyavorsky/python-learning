@@ -17,6 +17,7 @@ def binary_search(list, item):
     return None
 
 print(1)
+print("123")
 
 print("123")
 my_list = [1, 3, 5, 6, 8, 9, 10, 13, 15, 634, 6543]
